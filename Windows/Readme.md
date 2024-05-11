@@ -23,6 +23,7 @@ Press any key to continue...
 </pre>
 
 ref 1: https://learn.microsoft.com/en-us/answers/questions/1152199/wslregisterdistribution-failed-with-error-0x800701
+
 ref 2: https://blog.csdn.net/m0_54917022/article/details/128620422
 
 
