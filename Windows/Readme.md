@@ -1,4 +1,4 @@
-== System Health ==
+# System Health
 
 <pre>
 SFC /scannow
@@ -6,11 +6,11 @@ SFC /scannow
 DISM /online /cleanup-image /restorehealth
 </pre>
 
-== Installs ==
+# Installs
 
 For stuff that should be simple but isnt (typical windows BS)
 
-=== WSL ===
+## WSL
 
 Error:
 
@@ -43,9 +43,9 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 wsl --set-default-version 2
 </pre>
 
-== Issues ==
+# Issues
 
-=== Window not blanking ===
+# Window not blanking
 
 assuming you have screen blanking enabled, check whats holding it open
 
