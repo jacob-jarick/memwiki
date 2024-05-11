@@ -62,6 +62,10 @@ to remove the default ubuntu install
 
 <pre>wsl --unregister Ubuntu</pre>
 
+Then we need to remove it as an option in Terminal, else it auto installs when you click it (annoying as).
+
+In terminal, go to settings, scroll down to profiles, select "Ubuntu" and either delete profile (right at the bottom) or "Hide profile from dropdown".
+
 # Issues
 
 # Window not blanking
