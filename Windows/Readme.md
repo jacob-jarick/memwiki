@@ -12,7 +12,11 @@ For stuff that should be simple but isnt (typical windows BS)
 
 ## WSL
 
-Error:
+ref 1: https://learn.microsoft.com/en-us/answers/questions/1152199/wslregisterdistribution-failed-with-error-0x800701
+
+ref 2: https://blog.csdn.net/m0_54917022/article/details/128620422
+
+### Error
 
 <pre>
 Installing, this may take a few minutes...
@@ -22,10 +26,7 @@ Error: 0x8007019e The Windows Subsystem for Linux has not been enabled.
 Press any key to continue...
 </pre>
 
-ref 1: https://learn.microsoft.com/en-us/answers/questions/1152199/wslregisterdistribution-failed-with-error-0x800701
-
-ref 2: https://blog.csdn.net/m0_54917022/article/details/128620422
-
+### Install
 
 Install using windows store:
 
@@ -43,6 +44,23 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 wsl --set-default-version 2
 </pre>
+
+### Cleanup
+
+I end up with two ubuntu, I only want the latest.
+
+List Installed distros:
+
+<pre>
+wsl --list --verbose
+  NAME            STATE           VERSION
+* Ubuntu          Stopped         2
+  Ubuntu-24.04    Running         2
+</pre>
+
+to remove the default ubuntu install
+
+<pre>wsl --unregister Ubuntu</pre>
 
 # Issues
 
