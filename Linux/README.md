@@ -28,4 +28,8 @@ example mount options for fstab
 <pre>
 # manual mount
 mount -t cifs -o user=mem,rw //10.1.1.10/super$ /mnt/super
+
+# create smb user
+# this is needed to access password protected shares
+smbpasswd -a mem
 </pre>
