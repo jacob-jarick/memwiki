@@ -33,3 +33,9 @@ mount -t cifs -o user=mem,rw //10.1.1.10/super$ /mnt/super
 # this is needed to access password protected shares
 smbpasswd -a mem
 </pre>
+
+# Software RAID setup
+
+ref: https://www.digitalocean.com/community/tutorials/how-to-create-raid-arrays-with-mdadm-on-ubuntu
+
+
