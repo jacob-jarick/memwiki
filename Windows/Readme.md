@@ -1,9 +1,13 @@
 # System Health
 
 ```
+echo repair system
 SFC /scannow
 
+echo Repair Windows Image
 DISM /online /cleanup-image /restorehealth
+
+echo done
 ```
 
 # Installs
