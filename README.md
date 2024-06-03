@@ -1,4 +1,8 @@
 # memwiki
  various tech guides
 
-== Heading 1 ==
+
+[Linux](Linux/README.md)
+
+[Windows](Windows/Readme.md)
+
