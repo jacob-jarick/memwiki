@@ -1,16 +1,16 @@
 # services
 
-## list all
+list all
 ```
 systemctl list-units --no-pager
 ```
 
-## stop service
+stop service
 ```
 systemctl stop servicename
 ```
 
-## disable service
+disable service
 ```
 systemctl disable servicename
 ```
@@ -19,7 +19,7 @@ systemctl disable servicename
 
 ## BTRFS
 
-### relabel partition
+relabel partition
 
 ```
 btrfs filesystem label /dev/md0 super
