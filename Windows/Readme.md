@@ -1,10 +1,10 @@
 # System Health
 
-<pre>
+```
 SFC /scannow
 
 DISM /online /cleanup-image /restorehealth
-</pre>
+```
 
 # Installs
 
@@ -35,7 +35,7 @@ Terminal
 
 run following cmds in cmd.exe as administrator:
 
-<pre>
+```
 wsl --install
 
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
@@ -43,7 +43,9 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
 wsl --set-default-version 2
-</pre>
+
+echo done
+```
 
 ### Cleanup
 
@@ -51,8 +53,12 @@ I end up with two ubuntu, I only want the latest.
 
 List Installed distros:
 
-<pre>
+
+```
 wsl --list --verbose
+```
+
+<pre>
   NAME            STATE           VERSION
 * Ubuntu          Stopped         2
   Ubuntu-24.04    Running         2
@@ -60,7 +66,9 @@ wsl --list --verbose
 
 to remove the default ubuntu install
 
-<pre>wsl --unregister Ubuntu</pre>
+```
+wsl --unregister Ubuntu
+```
 
 Then we need to remove it as an option in Terminal, else it auto installs when you click it (annoying as).
 
@@ -72,6 +80,6 @@ In terminal, go to settings, scroll down to profiles, select "Ubuntu" and either
 
 assuming you have screen blanking enabled, check whats holding it open
 
-<pre>
+```
 powercfg -requests
-</pre>
+```
