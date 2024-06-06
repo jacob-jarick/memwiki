@@ -1,3 +1,15 @@
+Table of Contents
+=================
+
+* [services](#services)
+* [Block Devices](#block-devices)
+   * [Mount VHDX](#mount-vhdx)
+* [File Systems](#file-systems)
+   * [BTRFS](#btrfs)
+   * [CIFS](#cifs)
+* [Software RAID setup](#software-raid-setup)
+
+
 # services
 
 list all
