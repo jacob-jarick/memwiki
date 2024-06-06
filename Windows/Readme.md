@@ -1,3 +1,15 @@
+Table of Contents
+=================
+
+* [System Health](#system-health)
+* [Installs](#installs)
+   * [WSL](#wsl)
+      * [Error](#error)
+      * [Install](#install)
+      * [Cleanup](#cleanup)
+* [Issues](#issues)
+* [Window not blanking](#window-not-blanking)
+
 # System Health
 
 ```
