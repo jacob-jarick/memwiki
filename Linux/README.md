@@ -58,6 +58,12 @@ mount -o rw,nouser /dev/nbd0p2 /mnt/guest
 mount -o ro,nouser /dev/nbd0p2 /mnt/guest
 ```
 
+when done simply unmount
+
+```
+umount /mnt/guest
+```
+
 # File Systems
 
 ## BTRFS
