@@ -15,6 +15,49 @@ disable service
 systemctl disable servicename
 ```
 
+# Block Devices
+
+## Mount VHDX
+
+ref: https://gist.github.com/allenyllee/0a4c02952bf695470860b27369bbb60d
+
+Install prerequisites
+
+```
+apt install qemu-utils nbd-client
+```
+
+configure nbd module
+
+```
+rmmod nbd
+modprobe nbd max_part=16
+```
+
+mount block device
+```
+qemu-nbd -c /dev/nbd0 /path/to/image.vhdx
+```
+
+reload partition table
+```
+partprobe /dev/nbd0
+```
+
+check available partitions
+```
+fdisk -l /dev/nbd0
+```
+
+Mount target parition as usual
+```
+# RW (note I usually mount RO)
+mount -o rw,nouser /dev/nbd0p2 /mnt/guest
+
+# RO
+mount -o ro,nouser /dev/nbd0p2 /mnt/guest
+```
+
 # File Systems
 
 ## BTRFS
