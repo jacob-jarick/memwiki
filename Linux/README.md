@@ -1,13 +1,17 @@
 Table of Contents
 =================
 
+Table of Contents
+=================
+
+* [Table of Contents](#table-of-contents)
 * [services](#services)
 * [Block Devices](#block-devices)
+   * [Software RAID setup](#software-raid-setup)
    * [Mount VHDX](#mount-vhdx)
 * [File Systems](#file-systems)
    * [BTRFS](#btrfs)
    * [CIFS](#cifs)
-* [Software RAID setup](#software-raid-setup)
 
 
 # services
@@ -28,6 +32,10 @@ systemctl disable servicename
 ```
 
 # Block Devices
+
+## Software RAID setup
+
+ref: https://www.digitalocean.com/community/tutorials/how-to-create-raid-arrays-with-mdadm-on-ubuntu
 
 ## Mount VHDX
 
@@ -107,8 +115,5 @@ this is needed to access password protected shares
 smbpasswd -a mem
 ```
 
-# Software RAID setup
-
-ref: https://www.digitalocean.com/community/tutorials/how-to-create-raid-arrays-with-mdadm-on-ubuntu
 
 
