@@ -1,9 +1,6 @@
 Table of Contents
 =================
 
-Table of Contents
-=================
-
 * [Table of Contents](#table-of-contents)
 * [services](#services)
 * [Block Devices](#block-devices)
