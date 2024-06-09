@@ -99,3 +99,29 @@ assuming you have screen blanking enabled, check whats holding it open
 ```
 powercfg -requests
 ```
+
+# Sound
+
+## Dolby ATMOS
+
+ref 1: https://www.reddit.com/r/VLC/comments/dwzy9p/how_to_fix_dolby_atmos_in_vlc/?share_id=1yYKBsJNbBlHwkde5PVud&utm_content=1&utm_medium=android_app&utm_name=androidcss&utm_source=share&utm_term=5
+
+
+Its a two part solution, first you need to set output to dolby atmos and install dolby atmos via the windows store.
+
+### Setup
+
+Sound Properties, Spatial Sound, Select Dolby Atmos (windows store will pop up asking to install, do so)
+
+
+### VLC
+
+Go to Preferences > All > Audio > Output modules
+
+Change "Audio output module" to "Windows Multimedia Device output"
+
+Go to the "MMDevice" settings
+
+Change the "Output back-end" to "Windows Audio Session API output"
+
+Set "HDMI/SPDIF audio passthrough" to "Enabled"
