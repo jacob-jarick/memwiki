@@ -24,6 +24,9 @@ cd ~
 python3 -m venv audio-offset-finder
 
 # change to venv
+source ~/audio-offset-finder/bin/activate
+
+# install
 pip install audio-offset-finder
 
 # downgrade numpy
@@ -60,4 +63,52 @@ note the score, above 10 is considered very accurate, eg from my test
 ```
 Offset: 29.616 (seconds)
 Standard score: 14.573068627778227
+```
+
+## helper scripts
+
+there are two scripts in this directory. copy them to the venv's virtual directory.
+I use both to save time.
+
+```
+cp yt calc_offset ~/audio-offset-finder/bin/
+```
+
+### yt
+
+just an alias for
+```
+yt-dlp -f 233 $1
+```
+
+
+### calc_offset
+
+uses find in current directory to find first .egg and file .mp4 files.
+
+then runs the below command.
+
+```
+audio-offset-finder --find-offset-of "$bsfile" --within "$ytfile"
+```
+
+### Workflow
+
+pick empty temp dir
+```cd /tmp/calc_offset
+```
+
+empty it
+```rm -f *```
+
+
+Copy beat saber song file to temp dir.
+
+
+download video from youtube
+```yt URL```
+
+run calc_offset
+```
+calc_offset
 ```

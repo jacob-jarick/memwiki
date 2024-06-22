@@ -1,0 +1,10 @@
+#!/bin/bash
+
+bsfile=$(find . -iname "*egg")
+ytfile=$(find . -iname "*mp4")
+
+echo "Beat Saber File: $bsfile"
+echo "Youtube Video  : $ytfile"
+audio-offset-finder --find-offset-of "$bsfile" --within "$ytfile"
+
+

@@ -1,0 +1,3 @@
+#!/bin/bash -x
+
+yt-dlp -f 233 $1
