@@ -1,6 +1,8 @@
+
 Table of Contents
 =================
 
+* [Table of Contents](#table-of-contents)
 * [System Health](#system-health)
 * [Installs](#installs)
    * [WSL](#wsl)
@@ -8,7 +10,13 @@ Table of Contents
       * [Install](#install)
       * [Cleanup](#cleanup)
 * [Issues](#issues)
-* [Window not blanking](#window-not-blanking)
+   * [Window not blanking](#window-not-blanking)
+* [Sound](#sound)
+   * [Dolby ATMOS](#dolby-atmos)
+      * [Setup](#setup)
+      * [VLC](#vlc)
+* [Config](#config)
+   * [Disable web search in startmenu](#disable-web-search-in-startmenu)
 
 # System Health
 
@@ -92,7 +100,7 @@ In terminal, go to settings, scroll down to profiles, select "Ubuntu" and either
 
 # Issues
 
-# Window not blanking
+## Window not blanking
 
 assuming you have screen blanking enabled, check whats holding it open
 
@@ -125,3 +133,13 @@ Go to the "MMDevice" settings
 Change the "Output back-end" to "Windows Audio Session API output"
 
 Set "HDMI/SPDIF audio passthrough" to "Enabled"
+
+# Config
+
+## Disable web search in startmenu
+
+ref: https://www.tomshardware.com/how-to/disable-windows-web-search
+
+yet another feature from microsoft NO ON FUCKING ASKED FOR
+
+Run the [reg file](regfixes/DisableSearchBoxSuggestions.reg) and reboot (or manually enter it)

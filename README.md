@@ -16,3 +16,5 @@ ref 2: https://github.com/ekalinin/github-markdown-toc
 github doesnt support automatic TOC so I use this handy sript
 
 note auto insert is broken, I do it manually currently
+
+```gh-md-toc readme.md```
