@@ -1,17 +1,18 @@
+
 Table of Contents
 =================
 
 * [Table of Contents](#table-of-contents)
-* [services](#services)
+* [Services](#services)
 * [Block Devices](#block-devices)
    * [Software RAID setup](#software-raid-setup)
    * [Mount VHDX](#mount-vhdx)
 * [File Systems](#file-systems)
    * [BTRFS](#btrfs)
    * [CIFS](#cifs)
+      * [Create smb user](#create-smb-user)
 
-
-# services
+# Services
 
 list all
 ```
@@ -104,9 +105,11 @@ manual mount
 mount -t cifs -o user=mem,rw //10.1.1.10/super$ /mnt/super
 ```
 
-create smb user
+### Create smb user
 
-this is needed to access password protected shares
+this is needed when a smb.conf share is accessed by specific users.
+
+It is not needed for mounting a share.
 
 ```
 smbpasswd -a mem

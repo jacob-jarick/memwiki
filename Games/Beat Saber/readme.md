@@ -1,3 +1,19 @@
+
+Table of Contents
+=================
+
+* [About](#about)
+* [cinema offsets](#cinema-offsets)
+   * [Install Deps](#install-deps)
+      * [yt-dlp](#yt-dlp)
+      * [audio-offset-finder](#audio-offset-finder)
+   * [prepare](#prepare)
+   * [helper scripts](#helper-scripts)
+      * [yt](#yt)
+      * [calc_offset](#calc_offset)
+      * [Workflow](#workflow)
+
+
 # About
 
 This focuses on modding.
