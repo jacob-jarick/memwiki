@@ -17,3 +17,7 @@ Install the driver for the steam deck and reboot, resolved the issue instantly f
 Driver is stored in this repo under directory **Drivers**
 
 Driver is: BayHub_SD_STOR_installV3.4.01.89_W10W11_logoed_20220228.zip
+
+# Note
+
+While the reddit thread is about steam deck this worked for my asus laptop as well.
