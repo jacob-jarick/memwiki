@@ -113,6 +113,21 @@ It is not needed for mounting a share.
 
 ```
 smbpasswd -a mem
+
+# Misc
+
+## Random Strings
+
+For alpha numeric strings, I find pwgen to be the best option. you simply call it with the length you want and it provides a list of options.
+
+selection of passwords
+```
+pwgen 8
+```
+
+single password
+```
+pwgen 8 1
 ```
 
 
