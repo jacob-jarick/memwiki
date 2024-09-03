@@ -21,11 +21,13 @@ git diff -w DEV master
 
 # handy diff arguments
 
+ignore all whitespace changes
 ```
-# ignore all whitespace changes
 git diff -b
+```
 
-# show filename only
+show filename only
+```
 git diff -b --name-only
 ```
 
@@ -42,7 +44,7 @@ git reset --hard origin/master
 I use this when I accidentally create a branch I didnt want
 
 ```
- git branch -d branchname
+git branch -d branchname
 ```
 
 # Rollback changes
