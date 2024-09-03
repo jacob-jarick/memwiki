@@ -5,9 +5,14 @@
 very handy for reverting a specific file.
 
 ```
-# git checkout <COMMIT> <FILE>
+git checkout <COMMIT> <FILE>
+```
+
+Example
+```
 git checkout 916f2e9 package.json
 ```
+
 
 ## compare branches
 
