@@ -113,6 +113,7 @@ It is not needed for mounting a share.
 
 ```
 smbpasswd -a mem
+```
 
 # Misc
 
@@ -129,6 +130,5 @@ single password
 ```
 pwgen 8 1
 ```
-
 
 
