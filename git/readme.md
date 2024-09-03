@@ -5,15 +5,10 @@ Cheat Sheet
 
 very handy for reverting a specific file.
 
+revert file.txt to how it was in commit 916f2e9
 ```
-git checkout <COMMIT> <FILE>
+git checkout 916f2e9 file.txt
 ```
-
-Example
-```
-git checkout 916f2e9 package.json
-```
-
 
 # compare branches
 
