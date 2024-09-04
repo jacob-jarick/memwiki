@@ -20,14 +20,16 @@ Table of Contents
 
 # System Health
 
+run both these commands one after the other in cmd as administrator
+
+System File Checker
 ```
-echo repair system
 SFC /scannow
+```
 
 echo Repair Windows Image
+```
 DISM /online /cleanup-image /restorehealth
-
-echo done
 ```
 
 # Installs
