@@ -127,6 +127,18 @@ ref: https://answers.microsoft.com/en-us/windows/forum/all/camera-is-being-block
 - Click **Advanced Options**
 - Scroll to bottom, click **Reset**
 
+### Check Privacy Settings for Camera
+
+- Press **Windows key + X**
+- Click **Settings**
+- Click **Privacy**
+- Click **Camera**
+- Click **Camera access for this device** and ensure it is **ON**
+- Ensure **Allow apps to access your camera** is set
+- Scroll down and review the section **Choose which Microsoft Store apps can access your camera** (ensure teams is ON)
+- Ensure **Allow desktop apps to access your camera** is on (for non microsoft store apps apps such as firefox)
+
+
 # Sound
 
 ## Dolby ATMOS
