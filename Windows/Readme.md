@@ -110,6 +110,23 @@ assuming you have screen blanking enabled, check whats holding it open
 powercfg -requests
 ```
 
+## Webcam
+
+Camera is being blocked or used by another program
+
+ref: https://answers.microsoft.com/en-us/windows/forum/all/camera-is-being-blocked-or-used-by-another/db5e5b21-ad10-434e-a8f1-6bb06dd7fe3e
+
+### Reset Camera
+
+- Press **Windows key + X**
+- Click **Settings**
+- Click **Apps**
+- Click **Apps and Features**
+- In Search enter **camera**
+- Click the camera app in the search results (must click to show advance options)
+- Click **Advanced Options**
+- Scroll to bottom, click **Reset**
+
 # Sound
 
 ## Dolby ATMOS
