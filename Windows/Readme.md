@@ -11,12 +11,16 @@ Table of Contents
       * [Cleanup](#cleanup)
 * [Issues](#issues)
    * [Window not blanking](#window-not-blanking)
+   * [Webcam](#webcam)
+      * [Reset Camera](#reset-camera)
+      * [Check Privacy Settings for Camera](#check-privacy-settings-for-camera)
 * [Sound](#sound)
    * [Dolby ATMOS](#dolby-atmos)
       * [Setup](#setup)
       * [VLC](#vlc)
 * [Config](#config)
    * [Disable web search in startmenu](#disable-web-search-in-startmenu)
+
 
 # System Health
 
