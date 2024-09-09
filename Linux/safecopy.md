@@ -135,6 +135,18 @@ get all files
 foremost -t all -o foremost/ -i file.img
 ```
 
+quick hack.
+
+this is just for me, but if you only have a single image in your dir this will work for you too.
+
+```
+# make dir
+mkdir foremost
+
+# unpack first image to dir
+foremost -t all -o foremost/ -i $(ls -1 *.img)
+```
+
 ## photorec / testdisk
 
 ref 1: https://www.cgsecurity.org/wiki/TestDisk
