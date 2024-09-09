@@ -118,7 +118,9 @@ mount /dev/loop10p1 /mnt/guest/
 ref: https://dftt.sourceforge.net/
 
 I create a subdir and write out to that.
+
 ```mkdir foremost```
 
 get all files
+
 ```foremost -t all -o foremost/ -i file.img```
