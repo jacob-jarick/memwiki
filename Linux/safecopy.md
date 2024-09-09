@@ -83,3 +83,24 @@ Remove dupes from badblocks
 start stage 4
 
 ```safecopy --stage3 -R 12 -I stage3.badblocks.uniq -o stage4.badblocks "$SRC" "$DEST"```
+
+# Accessing Images
+
+This isnt safecopy specific but you end up doing this after you have imaged the drive so Im recording this here.
+
+## losetup
+
+this section needs more details.
+
+attach disk image to loopback device and scan partitions.
+
+```
+# attach image to free loop device
+losetup --partscan /dev/loop10 2G/2G.img
+
+# view partitions
+ls /dev/loop10*
+
+# mount
+mount /dev/loop10p1 /mnt/guest/
+```
