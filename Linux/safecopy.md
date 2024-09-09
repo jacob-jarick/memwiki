@@ -96,7 +96,7 @@ attach disk image to loopback device and scan partitions.
 
 ```
 # attach image to free loop device
-losetup --partscan /dev/loop10 2G/2G.img
+losetup --partscan /dev/loop10 /path/to/disk.img
 
 # view partitions
 ls /dev/loop10*
