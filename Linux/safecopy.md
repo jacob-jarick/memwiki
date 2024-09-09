@@ -102,13 +102,19 @@ attach disk image to loopback device and scan partitions.
 
 ```
 # attach image to free loop device
-losetup --partscan /dev/loop10 /path/to/disk.img
+losetup --partscan /dev/loop2 /path/to/disk.img
 
 # view partitions
-ls /dev/loop10*
+ls /dev/loop2*
 
 # mount
-mount /dev/loop10p1 /mnt/guest/
+mount /dev/loop2p1 /mnt/guest/
+```
+
+when done, unmount and detach image from loop back device like so
+
+```
+losetup -d /dev/loop2
 ```
 
 # Data recovery
@@ -128,3 +134,21 @@ get all files
 ```
 foremost -t all -o foremost/ -i file.img
 ```
+
+## photorec / testdisk
+
+ref 1: https://www.cgsecurity.org/wiki/TestDisk
+
+ref 2: https://www.cgsecurity.org/testdisk_doc/undelete_fat.html
+
+note this guide is working on windows disk images
+
+- run testdisk
+- select create
+- select target disk (disk not partition)
+- Select the partition table type - usually the default value is the correct one as TestDisk auto-detects the partition table type.
+- Advance
+- select target partiion
+- select undelete
+- 
+
