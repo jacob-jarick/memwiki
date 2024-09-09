@@ -96,8 +96,6 @@ start stage 4
 
 This isnt safecopy specific but you end up doing this after you have imaged the drive so Im recording this here.
 
-## losetup
-
 this section needs more details.
 
 attach disk image to loopback device and scan partitions.
