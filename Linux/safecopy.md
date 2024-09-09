@@ -11,6 +11,14 @@ ref: https://niziak.spox.org/wiki/datarecovery:safecopy
 
 Special shout out to the awesome personal wiki above which has the best information ive found on safecopy.
 
+# General Advice
+
+when recovering data, always make an image of the device then work off the image.
+
+Ideally you would make an image, copy the image then work off the image (when you need to repair the file system etc).
+
+That way if you corrupt the image, you can just copy it again rather than trying to image the a (potentially) failing device again.
+
 # Safe Copy disk imaging
 
 ## ENV setup
