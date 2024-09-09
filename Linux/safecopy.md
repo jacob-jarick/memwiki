@@ -123,6 +123,8 @@ losetup -d /dev/loop2
 
 ref: https://dftt.sourceforge.net/
 
+note run this directly on the image or partition..... not sure
+
 I create a subdir and write out to that.
 
 ```
