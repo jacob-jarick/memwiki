@@ -43,7 +43,13 @@ cd "$WDIR"
 ## Stage 1
 
 ```
-safecopy --stage1 -I /dev/null "$SRC" "$DEST"
+safecopy --stage1 "$SRC" "$DEST"
+```
+
+simple example:
+
+```
+safecopy --stage1 /dev/sda ./drive.img
 ```
 
 ### Stage 1 resume
