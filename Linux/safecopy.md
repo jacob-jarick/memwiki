@@ -139,6 +139,13 @@ mount /dev/loop2p1 /mnt/guest/
 
 when done, unmount and detach image from loop back device like so
 
+unmount
+```
+umount /mnt/guest
+```
+
+detach loopback device
+
 ```
 losetup -d /dev/loop2
 ```
