@@ -1,6 +1,21 @@
 Safecopy
 ========
 
+* [Safecopy](#safecopy)
+* [About](#about)
+* [General Advice](#general-advice)
+* [Safe Copy disk imaging](#safe-copy-disk-imaging)
+   * [ENV setup](#env-setup)
+   * [Stage 1](#stage-1)
+      * [Stage 1 resume](#stage-1-resume)
+   * [Stage 2](#stage-2)
+   * [Stage 3](#stage-3)
+   * [Stage 4](#stage-4---thrash-drive-to-death-mode)
+* [Accessing Images](#accessing-images)
+* [Data recovery](#data-recovery)
+   * [foremost](#foremost)
+   * [photorec / testdisk](#photorec--testdisk)
+
 # About
 
 A brilliant disk imaging tool. Many commerical solutions are simply a shameless rip off this tool.
