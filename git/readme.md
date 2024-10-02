@@ -1,6 +1,27 @@
 Cheat Sheet
 ===========
 
+# setup github access
+
+password auth has been disabled now, you need to use the gh tool which is fortunately very straight forward.
+
+You will need ssh keys, if you dont have any run the command below, it is safe to use defaults for all.
+
+```
+ssh-keygen
+```
+
+Install gh tool
+
+```
+sudo apt install gh
+```
+
+login
+```
+gh auth login
+```
+
 # checkout file from specific commit
 
 very handy for reverting a specific file.
