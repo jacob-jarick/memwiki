@@ -7,6 +7,13 @@ password auth has been disabled now, you need to use the gh tool which is fortun
 
 You will need ssh keys, if you dont have any run the command below, it is safe to use defaults for all.
 
+notes:
+
+- I use SSH, HTTPS is fine though
+- if you have multiple keys, pick your prefered, ideally the strongest encryption.
+- if Web url doesnt open just open it manually its very straight forward
+- you will need MFA setup if you do not have it already.
+
 ```
 ssh-keygen
 ```
