@@ -59,6 +59,20 @@ show filename only
 git diff -b --name-only
 ```
 
+# cd to repo root directory
+
+ref: 
+
+```
+cd $(git rev-parse --show-toplevel)
+```
+
+optionally make an alias for this by adding the following to your bashrc
+
+```
+alias gitroot='cd $(git rev-parse --show-toplevel)'
+```
+
 # Reset branch
 
 restores branch to exactly what it is remotely
@@ -105,12 +119,29 @@ ref 2: https://git-scm.com/docs/git-clean/2.23.0
 
 VS Code has this annoying habbit of caching file edits, so when editing the file in VS Code it doesnt match what is shown on the disk or in github until you save (or whatever triggers syncing to disk).
 
-To forcefully revert you can use these two commands:
+To forcefully revert:
+
+change to your repos root
+
+```
+cd $(git rev-parse --show-toplevel)
+```
+
+forcefully delete all untracked files (gets rid of VS Code litter) 
+
+**-d**: Remove untracked directories in addition to untracked files.
+
+**-f**: --force
 
 ```
 git clean -fd
+```
+
+checkout repo again
+
+**--** arguments after this are file paths, not branch names. 
+
+```
 git checkout -- .
 ```
 
--d: Remove untracked directories in addition to untracked files.
--f: --force
