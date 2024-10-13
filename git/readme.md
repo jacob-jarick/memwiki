@@ -1,6 +1,22 @@
 Cheat Sheet
 ===========
 
+
+Table of Contents
+=================
+
+* [Cheat Sheet](#cheat-sheet)
+* [setup github access](#setup-github-access)
+* [checkout file from specific commit](#checkout-file-from-specific-commit)
+* [compare branches](#compare-branches)
+* [handy diff arguments](#handy-diff-arguments)
+* [cd to repo root directory](#cd-to-repo-root-directory)
+* [Reset branch](#reset-branch)
+* [Delete local branch](#delete-local-branch)
+* [Rollback changes](#rollback-changes)
+* [Clear VS Code History](#clear-vs-code-history)
+
+
 # setup github access
 
 password auth has been disabled now, you need to use the gh tool which is fortunately very straight forward.
