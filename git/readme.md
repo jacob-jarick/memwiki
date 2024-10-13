@@ -96,3 +96,21 @@ Rollback the last 5 commits
 ```
 git revert --no-commit HEAD~5..HEAD
 ```
+
+# Clear VS Code History
+
+ref 1: https://stackoverflow.com/a/43560079/5023361
+
+ref 2: https://git-scm.com/docs/git-clean/2.23.0
+
+VS Code has this annoying habbit of caching file edits, so when editing the file in VS Code it doesnt match what is shown on the disk or in github until you save (or whatever triggers syncing to disk).
+
+To forcefully revert you can use these two commands:
+
+```
+git clean -fd
+git checkout -- .
+```
+
+-d: Remove untracked directories in addition to untracked files.
+-f: --force
