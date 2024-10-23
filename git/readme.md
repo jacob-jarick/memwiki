@@ -1,21 +1,19 @@
 Cheat Sheet
 ===========
 
-
-Table of Contents
-=================
-
-* [Cheat Sheet](#cheat-sheet)
 * [setup github access](#setup-github-access)
-* [checkout file from specific commit](#checkout-file-from-specific-commit)
-* [compare branches](#compare-branches)
+* [Specific File](#specific-file)
+   * [History](#history)
+   * [checkout from specific commit](#checkout-from-specific-commit)
 * [handy diff arguments](#handy-diff-arguments)
-* [cd to repo root directory](#cd-to-repo-root-directory)
-* [Reset branch](#reset-branch)
-* [Delete local branch](#delete-local-branch)
+* [Branches](#branches)
+   * [Reset](#reset)
+   * [Delete local](#delete-local)
+   * [Compare](#compare)
 * [Rollback changes](#rollback-changes)
-* [Clear VS Code History](#clear-vs-code-history)
-
+* [Misc](#misc)
+   * [Clear VS Code History](#clear-vs-code-history)
+   * [cd to repo root directory](#cd-to-repo-root-directory)
 
 # setup github access
 
@@ -45,22 +43,27 @@ login
 gh auth login
 ```
 
-# checkout file from specific commit
+# Specific File
+
+operations focusing on a specific file
+
+## History
+
+simple history
+
+```git log -- path/file.txt```
+
+Show changes (patch -p)
+
+```git log -p -- path/file.txt```
+
+## checkout from specific commit
 
 very handy for reverting a specific file.
 
 revert file.txt to how it was in commit 916f2e9
 ```
 git checkout 916f2e9 file.txt
-```
-
-# compare branches
-
-```
-git fetch
-git pull
-
-git diff -w DEV master
 ```
 
 # handy diff arguments
@@ -75,21 +78,10 @@ show filename only
 git diff -b --name-only
 ```
 
-# cd to repo root directory
 
-ref: 
+# Branches
 
-```
-cd $(git rev-parse --show-toplevel)
-```
-
-optionally make an alias for this by adding the following to your bashrc
-
-```
-alias gitroot='cd $(git rev-parse --show-toplevel)'
-```
-
-# Reset branch
+## Reset
 
 restores branch to exactly what it is remotely
 
@@ -97,12 +89,21 @@ restores branch to exactly what it is remotely
 git reset --hard origin/master
 ```
 
-# Delete local branch
+## Delete local
 
 I use this when I accidentally create a branch I didnt want
 
 ```
 git branch -d branchname
+```
+
+## Compare
+
+```
+git fetch
+git pull
+
+git diff -w DEV master
 ```
 
 # Rollback changes
@@ -126,8 +127,10 @@ Rollback the last 5 commits
 ```
 git revert --no-commit HEAD~5..HEAD
 ```
+# Misc
 
-# Clear VS Code History
+
+## Clear VS Code History
 
 ref 1: https://stackoverflow.com/a/43560079/5023361
 
@@ -161,3 +164,16 @@ checkout repo again
 git checkout -- .
 ```
 
+## cd to repo root directory
+
+ref:
+
+```
+cd $(git rev-parse --show-toplevel)
+```
+
+optionally make an alias for this by adding the following to your bashrc
+
+```
+alias gitroot='cd $(git rev-parse --show-toplevel)'
+```
