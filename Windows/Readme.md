@@ -156,6 +156,7 @@ Its a two part solution, first you need to set output to dolby atmos and install
 
 Sound Properties, Spatial Sound, Select Dolby Atmos (windows store will pop up asking to install, do so)
 
+![Windows Sound Settings](./surround_sound/spatial_sound.png)
 
 ### VLC
 
@@ -168,6 +169,8 @@ Go to the "MMDevice" settings
 Change the "Output back-end" to "Windows Audio Session API output"
 
 Set "HDMI/SPDIF audio passthrough" to "Enabled"
+
+![Windows Sound Settings](./surround_sound/vlc_mmd.png)
 
 # Config
 
