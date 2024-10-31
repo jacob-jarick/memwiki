@@ -149,6 +149,7 @@ ref: https://answers.microsoft.com/en-us/windows/forum/all/camera-is-being-block
 
 ref 1: https://www.reddit.com/r/VLC/comments/dwzy9p/how_to_fix_dolby_atmos_in_vlc/?share_id=1yYKBsJNbBlHwkde5PVud&utm_content=1&utm_medium=android_app&utm_name=androidcss&utm_source=share&utm_term=5
 
+Test Video: https://youtu.be/ce8XUUflWhA?si=memwiki
 
 Its a two part solution, first you need to set output to dolby atmos and install dolby atmos via the windows store.
 
