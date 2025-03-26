@@ -1,4 +1,3 @@
-
 Table of Contents
 =================
 
@@ -11,6 +10,9 @@ Table of Contents
    * [BTRFS](#btrfs)
    * [CIFS](#cifs)
       * [Create smb user](#create-smb-user)
+* [Misc](#misc)
+   * [Random Strings](#random-strings)
+   * [dos2unix](#dos2unix)
 
 # Services
 
@@ -129,6 +131,16 @@ pwgen 8
 single password
 ```
 pwgen 8 1
+```
+
+## dos2unix
+
+For when you want all text files in a dir to be converted.
+
+bonus points, using parallel instead of xargs
+
+```
+find . -type f -exec file {} \; | grep -i "text" | cut -d: -f1 | parallel -j 4 dos2unix -f
 ```
 
 
