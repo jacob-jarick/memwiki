@@ -3,6 +3,17 @@ Quick dump for doing audits.
 
 This isnt worth others reading yet.
 
+# Tennants
+
+## List
+
+display all tennants
+
+```
+Get-AzTenant | Select-Object Id, DisplayName, Country, Domains
+```
+
+## Swap
 
 I work out of windows terminal, love it.
 
