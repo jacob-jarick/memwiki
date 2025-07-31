@@ -48,13 +48,13 @@ ref 2: https://blog.csdn.net/m0_54917022/article/details/128620422
 
 ### Error
 
-<pre>
+```
 Installing, this may take a few minutes...
 WslRegisterDistribution failed with error: 0x8007019e
 Error: 0x8007019e The Windows Subsystem for Linux has not been enabled.
 
 Press any key to continue...
-</pre>
+```
 
 ### Install
 
@@ -113,6 +113,51 @@ assuming you have screen blanking enabled, check whats holding it open
 ```
 powercfg -requests
 ```
+
+### USO Worker
+
+see also: https://superuser.com/questions/1612777/is-there-any-fix-for-mousocoreworker-exe-preventing-windows-10-entering-sleep
+
+Microsoft has a long running bug where windows update (even when just waiting to install) keeps screen on.
+
+for me this is the culprit
+
+```
+PS C:\Windows\system32> powercfg -requests
+DISPLAY:
+None.
+
+SYSTEM:
+None.
+
+AWAYMODE:
+None.
+
+EXECUTION:
+[PROCESS] \Device\HarddiskVolume3\Windows\System32\MoUsoCoreWorker.exe
+USO Worker
+
+PERFBOOST:
+None.
+
+ACTIVELOCKSCREEN:
+None.
+```
+
+and Ive tried this fix.
+
+```
+powercfg /requestsoverride process "MoUSO Core Worker" execution
+powercfg /requestsoverride process "USO Worker" execution
+```
+
+This will override any requests MoUSO/ USO makes which you can confirm with this command
+
+```
+powercfg /requestsoverride
+```
+
+when you run powercfg -requests, those entries may still appear, but they are ignored by power management logic.
 
 ## Webcam
 
