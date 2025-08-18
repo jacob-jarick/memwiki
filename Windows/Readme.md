@@ -28,7 +28,7 @@ run both these commands one after the other in powershell as administrator
 
 hold windows key and press X
 
-Select "Windows Powershell (Admin)"
+Select "Windows PowerShell (Admin)"
 
 System File Checker
 ```
