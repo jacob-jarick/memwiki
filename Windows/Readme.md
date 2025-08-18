@@ -31,7 +31,7 @@ System File Checker
 SFC /scannow
 ```
 
-echo Repair Windows Image
+Repair Windows Image
 ```
 DISM /online /cleanup-image /restorehealth
 ```
