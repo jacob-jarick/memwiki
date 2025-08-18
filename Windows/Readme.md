@@ -24,7 +24,11 @@ Table of Contents
 
 # System Health
 
-run both these commands one after the other in cmd as administrator
+run both these commands one after the other in powershell as administrator
+
+hold windows key and press X
+
+Select "Windows Powershell (Admin)"
 
 System File Checker
 ```
