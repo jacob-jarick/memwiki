@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growatt Settings Table</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'Noto Sans', Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+        
+        th {
+            background-color: #34495e;
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: 600;
+            border: 1px solid #2c3e50;
+        }
+        
+        td {
+            padding: 10px 8px;
+            text-align: center;
+            border: 1px solid #bdc3c7;
+            vertical-align: middle;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .symbol {
+            font-size: 18px;
+            font-weight: normal;
+        }
+        
+        .description {
+            text-align: left;
+            font-weight: 500;
+        }
+        
+        .value {
+            font-weight: 600;
+            color: #2980b9;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                margin: 0;
+            }
+            .container {
+                box-shadow: none;
+                margin: 0;
+                padding: 20px;
+            }
+            tr:hover {
+                background-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Growatt Settings Configuration Table</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 8%">#</th>
+                    <th style="width: 50%">Description</th>
+                    <th style="width: 20%">Value</th>
+                    <th style="width: 22%">Symbol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>01</td><td class="description">Output source priority</td><td class="value">SBU</td><td class="symbol">⚡</td></tr>
+                <tr><td>02</td><td class="description">Max charging current</td><td class="value">50</td><td class="symbol">🔌</td></tr>
+                <tr><td>03</td><td class="description">AC input voltage range</td><td class="value">APL</td><td class="symbol">🔌</td></tr>
+                <tr><td>04</td><td class="description">Power saving mode</td><td class="value">DI 5</td><td class="symbol">🐖</td></tr>
+                <tr><td>05</td><td class="description">Battery type</td><td class="value">US2</td><td class="symbol">🔋</td></tr>
+                <tr><td>06</td><td class="description">Auto restart on overload</td><td class="value">DI 5</td><td class="symbol">🔁</td></tr>
+                <tr><td>07</td><td class="description">Auto restart on over temp</td><td class="value">DI 5</td><td class="symbol">🌡️</td></tr>
+                <tr><td>08</td><td class="description">Output voltage</td><td class="value">230</td><td class="symbol">V</td></tr>
+                <tr><td>09</td><td class="description">Output frequency</td><td class="value">50</td><td class="symbol">HZ</td></tr>
+                <tr><td>10</td><td class="description">Number of series batteries</td><td class="value">4</td><td class="symbol">🔋</td></tr>
+                <tr><td>11</td><td class="description">Max utility charging current</td><td class="value">10</td><td class="symbol">⚡</td></tr>
+                <tr><td>12</td><td class="description">🔋 to AC switch voltage</td><td class="value">48.5</td><td class="symbol">🪫</td></tr>
+                <tr><td>13</td><td class="description">AC to 🔋 switch voltage</td><td class="value">54.4</td><td class="symbol">🔋</td></tr>
+                <tr><td>14</td><td class="description">Charger source priority</td><td class="value">SNU</td><td class="symbol">⚡+☀️</td></tr>
+                <tr><td>15</td><td class="description">Alarm control</td><td class="value">ON</td><td class="symbol">🔔</td></tr>
+                <tr><td>16</td><td class="description">Backlight control</td><td class="value">ON</td><td class="symbol">💡</td></tr>
+                <tr><td>17</td><td class="description">Alarm on AC loss</td><td class="value">OFF</td><td class="symbol">🔔</td></tr>
+                <tr><td>18</td><td class="description">Overload bypass</td><td class="value">DI 5</td><td class="symbol">🚫</td></tr>
+                <tr><td>19</td><td class="description">CV charging voltage</td><td class="value">56.4</td><td class="symbol">🔋</td></tr>
+                <tr><td>20</td><td class="description">Floating charging voltage</td><td class="value">54.0</td><td class="symbol">🔋</td></tr>
+                <tr><td>21</td><td class="description">Low DC cut-off voltage</td><td class="value">46</td><td class="symbol">🪫</td></tr>
+                <tr><td>22</td><td class="description">Output mode (parallel config)</td><td class="value">DI 5</td><td class="symbol">✂️</td></tr>
+                <tr><td>23</td><td class="description">AC output mode</td><td class="value">DI 5</td><td class="symbol">~</td></tr>
+                <tr><td>28</td><td class="description">Address</td><td class="value">1</td><td class="symbol">🏠</td></tr>
+                <tr><td>37</td><td class="description">Real-time clock: Year</td><td class="value">2025</td><td class="symbol">📅</td></tr>
+                <tr><td>38</td><td class="description">Real-time clock: Month</td><td class="value">09</td><td class="symbol">📅</td></tr>
+                <tr><td>39</td><td class="description">Real-time clock: Day</td><td class="value">24</td><td class="symbol">📅</td></tr>
+                <tr><td>40</td><td class="description">Real-time clock: Hour</td><td class="value">23</td><td class="symbol">⏰</td></tr>
+                <tr><td>41</td><td class="description">Real-time clock: Minute</td><td class="value">31</td><td class="symbol">⏰</td></tr>
+                <tr><td>42</td><td class="description">Real-time clock: Second</td><td class="value">41</td><td class="symbol">⏱️</td></tr>
+                <tr><td>43</td><td class="description">Battery equalization</td><td class="value">DI 5</td><td class="symbol">🔋</td></tr>
+                <tr><td>44</td><td class="description">Battery equalization voltage</td><td class="value">58.4</td><td class="symbol">⚡</td></tr>
+                <tr><td>45</td><td class="description">Battery equalization time</td><td class="value">60</td><td class="symbol">⌛</td></tr>
+                <tr><td>46</td><td class="description">Battery equalization timeout</td><td class="value">120</td><td class="symbol">⌛</td></tr>
+                <tr><td>47</td><td class="description">Battery equalization interval</td><td class="value">30</td><td class="symbol">⚖️</td></tr>
+                <tr><td>48</td><td class="description">Equalization activated immediately</td><td class="value">OFF</td><td class="symbol">⚖️</td></tr>
+                <tr><td>49</td><td class="description">Utility charge time window</td><td class="value">0000</td><td class="symbol">⏳</td></tr>
+                <tr><td>50</td><td class="description">Output time window</td><td class="value">0000</td><td class="symbol">⏳</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+</body></html>
