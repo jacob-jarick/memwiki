@@ -1,32 +1,34 @@
 Cheat Sheet
 ===========
 
-* [setup github access](#setup-github-access)
-* [Specific File](#specific-file)
-   * [History](#history)
-   * [checkout from specific commit](#checkout-from-specific-commit)
-* [handy diff arguments](#handy-diff-arguments)
-* [Branches](#branches)
-   * [Reset](#reset)
-   * [Delete local](#delete-local)
-   * [Compare](#compare)
-* [Rollback changes](#rollback-changes)
-* [Misc](#misc)
-   * [Clear VS Code History](#clear-vs-code-history)
-   * [cd to repo root directory](#cd-to-repo-root-directory)
+- [Cheat Sheet](#cheat-sheet)
+- [Setup GitHub Access](#setup-github-access)
+- [Specific File](#specific-file)
+  - [History](#history)
+  - [Checkout Specific Commit](#checkout-specific-commit)
+  - [Checkout File from Specific Commit](#checkout-file-from-specific-commit)
+- [Handy Diff Arguments](#handy-diff-arguments)
+- [Branches](#branches)
+  - [Reset](#reset)
+  - [Delete Local Branch](#delete-local-branch)
+  - [Compare](#compare)
+- [Rollback Changes](#rollback-changes)
+- [Misc](#misc)
+  - [Clear VS Code History](#clear-vs-code-history)
+  - [Cd to Repository Root Directory](#cd-to-repository-root-directory)
 
-# setup github access
+# Setup GitHub Access
 
-password auth has been disabled now, you need to use the gh tool which is fortunately very straight forward.
+Password authentication has been disabled. You now need to use the gh tool, which is fortunately very straightforward.
 
-You will need ssh keys, if you dont have any run the command below, it is safe to use defaults for all.
+You will need SSH keys. If you don't have any, run the command below. It is safe to use defaults for all.
 
-notes:
+Notes:
 
-- I use SSH, HTTPS is fine though
-- if you have multiple keys, pick your prefered, ideally the strongest encryption.
-- if Web url doesnt open just open it manually its very straight forward
-- you will need MFA setup if you do not have it already.
+- I use SSH; HTTPS is fine though.
+- If you have multiple keys, pick your preferred, ideally the strongest encryption.
+- If the web URL doesn't open, just open it manually—it's very straightforward.
+- You will need MFA set up if you do not have it already.
 
 ```
 ssh-keygen
@@ -51,22 +53,43 @@ operations focusing on a specific file
 
 simple history
 
-```git log -- path/file.txt```
+```
+git log -- path/file.txt
+```
 
 Show changes (patch -p)
 
-```git log -p -- path/file.txt```
+```
+git log -p -- path/file.txt
+```
 
-## checkout from specific commit
+## Checkout Specific Commit
 
-very handy for reverting a specific file.
+For finding when something broke.
 
-revert file.txt to how it was in commit 916f2e9
+This will put you in a detached HEAD state.
+
+```
+git checkout ff04bcb0c1a6447ff282187d1dafa9ca724dc9ba
+```
+
+To get back to HEAD:
+
+```
+git checkout main
+```
+
+## Checkout File from Specific Commit
+
+Very handy for reverting a specific file.
+
+Revert file.txt to how it was in commit 916f2e9:
+
 ```
 git checkout 916f2e9 file.txt
 ```
 
-# handy diff arguments
+# Handy Diff Arguments
 
 ignore all whitespace changes
 ```
@@ -83,15 +106,15 @@ git diff -b --name-only
 
 ## Reset
 
-restores branch to exactly what it is remotely
+Restores the branch to exactly match the remote.
 
 ```
 git reset --hard origin/master
 ```
 
-## Delete local
+## Delete Local Branch
 
-I use this when I accidentally create a branch I didnt want
+I use this when I accidentally create a branch I didn't want.
 
 ```
 git branch -d branchname
@@ -106,7 +129,7 @@ git pull
 git diff -w DEV master
 ```
 
-# Rollback changes
+# Rollback Changes
 
 ref: https://stackoverflow.com/a/21718540/5023361
 
@@ -132,21 +155,21 @@ git revert --no-commit HEAD~5..HEAD
 
 ## Clear VS Code History
 
-ref 1: https://stackoverflow.com/a/43560079/5023361
+Ref 1: https://stackoverflow.com/a/43560079/5023361
 
-ref 2: https://git-scm.com/docs/git-clean/2.23.0
+Ref 2: https://git-scm.com/docs/git-clean/2.23.0
 
-VS Code has this annoying habbit of caching file edits, so when editing the file in VS Code it doesnt match what is shown on the disk or in github until you save (or whatever triggers syncing to disk).
+VS Code has this annoying habit of caching file edits, so when editing the file in VS Code it doesn't match what is shown on the disk or in GitHub until you save (or whatever triggers syncing to disk).
 
 To forcefully revert:
 
-change to your repos root
+Change to your repository's root.
 
 ```
 cd $(git rev-parse --show-toplevel)
 ```
 
-forcefully delete all untracked files (gets rid of VS Code litter) 
+Forcefully delete all untracked files (gets rid of VS Code litter).
 
 **-d**: Remove untracked directories in addition to untracked files.
 
@@ -156,23 +179,23 @@ forcefully delete all untracked files (gets rid of VS Code litter)
 git clean -fd
 ```
 
-checkout repo again
+Check out the repository again.
 
-**--** arguments after this are file paths, not branch names. 
+**--** arguments after this are file paths, not branch names.
 
 ```
 git checkout -- .
 ```
 
-## cd to repo root directory
+## Cd to Repository Root Directory
 
-ref:
+Ref:
 
 ```
 cd $(git rev-parse --show-toplevel)
 ```
 
-optionally make an alias for this by adding the following to your bashrc
+Optionally, make an alias for this by adding the following to your bashrc:
 
 ```
 alias gitroot='cd $(git rev-parse --show-toplevel)'
