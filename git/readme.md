@@ -30,18 +30,18 @@ Notes:
 - If the web URL doesn't open, just open it manually—it's very straightforward.
 - You will need MFA set up if you do not have it already.
 
-```
+```bash
 ssh-keygen
 ```
 
 Install gh tool
 
-```
+```bash
 sudo apt install gh
 ```
 
 login
-```
+```bash
 gh auth login
 ```
 
@@ -53,13 +53,13 @@ operations focusing on a specific file
 
 simple history
 
-```
+```bash
 git log -- path/file.txt
 ```
 
 Show changes (patch -p)
 
-```
+```bash
 git log -p -- path/file.txt
 ```
 
@@ -69,13 +69,13 @@ For finding when something broke.
 
 This will put you in a detached HEAD state.
 
-```
+```bash
 git checkout ff04bcb0c1a6447ff282187d1dafa9ca724dc9ba
 ```
 
 To get back to HEAD:
 
-```
+```bash
 git checkout main
 ```
 
@@ -85,22 +85,27 @@ Very handy for reverting a specific file.
 
 Revert file.txt to how it was in commit 916f2e9:
 
-```
+```bash
 git checkout 916f2e9 file.txt
 ```
 
 # Handy Diff Arguments
 
 ignore all whitespace changes
-```
+```bash
 git diff -b
 ```
 
 show filename only
-```
+```bash
 git diff -b --name-only
 ```
 
+Show diff between current and previous commit.  
+Also filtering by file type.
+```bash
+git diff HEAD~1 HEAD -- '*.cs'
+```
 
 # Branches
 
@@ -108,7 +113,7 @@ git diff -b --name-only
 
 Restores the branch to exactly match the remote.
 
-```
+```bash
 git reset --hard origin/master
 ```
 
@@ -116,13 +121,13 @@ git reset --hard origin/master
 
 I use this when I accidentally create a branch I didn't want.
 
-```
+```bash
 git branch -d branchname
 ```
 
 ## Compare
 
-```
+```bash
 git fetch
 git pull
 
@@ -136,18 +141,18 @@ ref: https://stackoverflow.com/a/21718540/5023361
 The safest approach is to create a new commit that rolls back changes made in previous commits.
 
 Roll back every change made after commit 0d1d7fc3
-```
+```bash
 git revert --no-commit 0d1d7fc3..HEAD
 git commit
 ```
 
 Rollback the last commit
-```
+```bash
 git revert --no-commit HEAD~1..HEAD
 ```
 
 Rollback the last 5 commits
-```
+```bash
 git revert --no-commit HEAD~5..HEAD
 ```
 # Misc
@@ -165,7 +170,7 @@ To forcefully revert:
 
 Change to your repository's root.
 
-```
+```bash
 cd $(git rev-parse --show-toplevel)
 ```
 
@@ -175,7 +180,7 @@ Forcefully delete all untracked files (gets rid of VS Code litter).
 
 **-f**: --force
 
-```
+```bash
 git clean -fd
 ```
 
@@ -183,7 +188,7 @@ Check out the repository again.
 
 **--** arguments after this are file paths, not branch names.
 
-```
+```bash
 git checkout -- .
 ```
 
@@ -191,12 +196,12 @@ git checkout -- .
 
 Ref:
 
-```
+```bash
 cd $(git rev-parse --show-toplevel)
 ```
 
 Optionally, make an alias for this by adding the following to your bashrc:
 
-```
+```bash
 alias gitroot='cd $(git rev-parse --show-toplevel)'
 ```
