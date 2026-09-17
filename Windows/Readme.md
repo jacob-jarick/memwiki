@@ -22,6 +22,18 @@ Table of Contents
    * [Disable web search in startmenu](#disable-web-search-in-startmenu)
 
 
+# Software
+
+Windows And MS Office: https://massgrave.dev/office_c2r_links
+
+activator:
+
+```
+powershell
+irm https://get.activated.win | iex
+
+```
+
 # System Health
 
 run both these commands one after the other in powershell as administrator
