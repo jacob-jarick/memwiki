@@ -1,0 +1,18 @@
+xset s off
+xset s noblank
+xset dpms 0 0 0
+xset -dpms
+
+
+# Force a visible background color (Light Gray instead of black)
+xsetroot -solid gray &
+
+# Make sure the mouse cursor is explicitly drawn as a left arrow pointer
+xsetroot -cursor_name left_ptr &
+
+# Launch xeyes right in the center of the screen
+/usr/bin/xeyes &
+
+# Display the image fullscreen and check disk for updates every 10 seconds
+feh --fullscreen --hide-pointer --reload 10 /tmp/kiosk.png &
+
