@@ -46,7 +46,7 @@ with sync_playwright() as p:
     browser = p.chromium.launch_persistent_context(
         user_data_dir="/tmp/ha_chrome_profile",
         headless=True,
-        viewport={"width": 1280, "height": 720},
+        viewport={"width": 1920, "height": 1200},
     )
     page = browser.new_page()
     page.goto(URL, wait_until="networkidle")
