@@ -14,5 +14,5 @@ xsetroot -cursor_name left_ptr &
 /usr/bin/xeyes &
 
 # Display the image fullscreen and check disk for updates every 10 seconds
-feh --fullscreen --hide-pointer --reload 10 /tmp/kiosk.png &
-
+# feh --fullscreen --hide-pointer --reload 10 /tmp/kiosk.png &
+/home/mem/bin/hadisplay.sh &
