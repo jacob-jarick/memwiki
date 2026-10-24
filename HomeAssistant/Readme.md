@@ -28,11 +28,16 @@ I tried HACS puppet plugin on HA but i found it nothing but trouble. I think it 
 
 | file(s) | Permissions | Server | Location | Purpose |
 | --- | --- | --- |  --- | --- |
-| autostart | N/A | HaDash.local | /home/mem/.config/openbox/autostart | starts minimal xorg and displays image using feh |
+| autostart | N/A | HaDash.local | /home/mem/.config/openbox/autostart | starts minimal xorg, launches xeyes to confirm startup, and hands off display duty to hadisplay.sh |
+| hadisplay.sh | a+x | HaDash.local | /home/mem/bin/hadisplay.sh | dependency of autostart; loops feh so it auto-heals (relaunches) if it crashes or /tmp/kiosk.png is missing |
 | take_snapshot.py | a+x | FileServer.local | /home/mem/take_snapshot.py | generates snapshop of dashboard |
 | .ha_credentials | 600 | FileServer.local | /home/mem/.ha_credentials | credentials for take_snapshot.py |
 
 # Install
+
+## HaDash (client)
+
+Not fully documented yet (TODO). It's a minimal openbox setup that auto-logs in as user `mem` and runs `/home/mem/.config/openbox/autostart`, which launches a copy of Xeyes to confirm it started, then hands off to `/home/mem/bin/hadisplay.sh` (make sure this script exists and is executable, autostart depends on it).
 
 ## Fileserver
 
